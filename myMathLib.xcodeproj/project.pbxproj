@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D40FC8221EC582B00EEF4F7 /* myMathLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40FC8121EC582B00EEF4F7 /* myMathLib.m */; };
-		1D40FC8321EC582B00EEF4F7 /* myMathLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D40FC8021EC582B00EEF4F7 /* myMathLib.h */; };
+		1D40FC9921EC58C600EEF4F7 /* cfuncs.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D40FC9821EC58C600EEF4F7 /* cfuncs.c */; };
+		1DBD8A5621F1B4E3004CD4C3 /* libnng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBD8A5521F1B4E3004CD4C3 /* libnng.a */; };
+		1DBD8B8621F57F21004CD4C3 /* libnng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBD8B8521F57F21004CD4C3 /* libnng.a */; };
+		1DBD8BB021F58176004CD4C3 /* nngreqrep.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD8BAF21F58176004CD4C3 /* nngreqrep.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +20,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				1D40FC8321EC582B00EEF4F7 /* myMathLib.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,8 +27,14 @@
 
 /* Begin PBXFileReference section */
 		1D40FC7D21EC582B00EEF4F7 /* libmyMathLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmyMathLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D40FC8021EC582B00EEF4F7 /* myMathLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myMathLib.h; sourceTree = "<group>"; };
-		1D40FC8121EC582B00EEF4F7 /* myMathLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myMathLib.m; sourceTree = "<group>"; };
+		1D40FC9721EC58C600EEF4F7 /* cfuncs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cfuncs.h; sourceTree = "<group>"; };
+		1D40FC9821EC58C600EEF4F7 /* cfuncs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cfuncs.c; sourceTree = "<group>"; };
+		1D67720321F01A5300534248 /* nng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nng.h; sourceTree = "<group>"; };
+		1D6773D821F05C1F00534248 /* libnng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnng.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DBD8A5521F1B4E3004CD4C3 /* libnng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnng.a; path = "../../../../code_nng/nng-1.1.1-B/ios-build/Debug/libnng.a"; sourceTree = "<group>"; };
+		1DBD8B8521F57F21004CD4C3 /* libnng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnng.a; sourceTree = "<group>"; };
+		1DBD8BAE21F58176004CD4C3 /* nngreqrep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nngreqrep.h; sourceTree = "<group>"; };
+		1DBD8BAF21F58176004CD4C3 /* nngreqrep.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nngreqrep.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBD8A5621F1B4E3004CD4C3 /* libnng.a in Frameworks */,
+				1DBD8B8621F57F21004CD4C3 /* libnng.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +53,10 @@
 		1D40FC7421EC582B00EEF4F7 = {
 			isa = PBXGroup;
 			children = (
+				1DBD8B8521F57F21004CD4C3 /* libnng.a */,
 				1D40FC7F21EC582B00EEF4F7 /* myMathLib */,
 				1D40FC7E21EC582B00EEF4F7 /* Products */,
+				1D6773D721F05C1F00534248 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +71,22 @@
 		1D40FC7F21EC582B00EEF4F7 /* myMathLib */ = {
 			isa = PBXGroup;
 			children = (
-				1D40FC8021EC582B00EEF4F7 /* myMathLib.h */,
-				1D40FC8121EC582B00EEF4F7 /* myMathLib.m */,
+				1D67720321F01A5300534248 /* nng.h */,
+				1D40FC9721EC58C600EEF4F7 /* cfuncs.h */,
+				1D40FC9821EC58C600EEF4F7 /* cfuncs.c */,
+				1DBD8BAF21F58176004CD4C3 /* nngreqrep.c */,
+				1DBD8BAE21F58176004CD4C3 /* nngreqrep.h */,
 			);
 			path = myMathLib;
+			sourceTree = "<group>";
+		};
+		1D6773D721F05C1F00534248 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DBD8A5521F1B4E3004CD4C3 /* libnng.a */,
+				1D6773D821F05C1F00534248 /* libnng.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D40FC8221EC582B00EEF4F7 /* myMathLib.m in Sources */,
+				1DBD8BB021F58176004CD4C3 /* nngreqrep.c in Sources */,
+				1D40FC9921EC58C600EEF4F7 /* cfuncs.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +270,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB42365KKX;
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myMathLib",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -258,6 +288,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB42365KKX;
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myMathLib",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
